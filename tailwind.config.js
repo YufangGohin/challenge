@@ -94,6 +94,8 @@ const config = {
       "header-5": ["18px", "26px"],
       "subtitle-1": ["16px", "24px"],
       "subtitle-2": ["14px", "20px"],
+      folio: ["46px", "40px"],
+      "folio-1": ["28px", "24px"],
       caption: ["14px", "22px"],
     },
     colors: {

@@ -2,6 +2,8 @@
  * @component
  */
 
+import { TradeCard } from "../components/TradeCard";
+
 const Homepage = () => {
   return (
     <div className="flex flex-col items-center w-full">
@@ -73,8 +75,8 @@ const Homepage = () => {
           <div className="w-[780px] h-[455px] rounded-xl bg-gray-6" />
 
           {/* Trade Placeholder */}
-          <div className="flex justify-center items-center w-[380px] h-[455px] bg-white rounded-xl border text-gray-4 border-gray-6">
-            <p>Component Goes Here</p>
+          <div className="flex justify-center items-center bg-white rounded-xl ">
+            <TradeCard />
           </div>
         </div>
 
