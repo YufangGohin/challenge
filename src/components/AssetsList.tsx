@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import type { NextApiRequest, NextApiResponse } from "next";
 
 import { Instrument } from "@/types/api.d";
 
@@ -54,7 +53,7 @@ const AssetListItems = ({
     {assets &&
       assets.map((asset: Instrument) => (
         <li className="flex pb-5">
-          <div className="w-8 h-8 bg-white rounded-full mr-2 border border-gray-6 mt-1"></div>
+          <div className="w-8 h-8 bg-white rounded-full mr-2 border border-gray-6 mt-1" />
           <div className="flex flex-col">
             <span className="text-body-2 font-medium">{asset.name}</span>
             <span className="text-body-3 font-light text-gray-4">
@@ -78,7 +77,7 @@ const AssetListItems = ({
   </div>
 );
 
-export const AssetsList = () => {
+const AssetsList = () => {
   const [allCoins, setCoins] = useState<Instrument[]>();
   const [allStocks, setStocks] = useState<Instrument[]>();
   useEffect(() => {
@@ -86,7 +85,7 @@ export const AssetsList = () => {
       const res = await fetch(`/api/coins`);
       const data = await res.json();
       const uniqueCoins = [
-        ...new Map(data.result.map((item) => [item["name"], item])).values(),
+        ...new Map(data.result.map((item) => [item.name, item])).values(),
       ];
       setCoins(uniqueCoins as any[]);
     };
@@ -99,10 +98,11 @@ export const AssetsList = () => {
     getAllStocks();
   }, []);
   return (
-    <ul role="list" className="rounded-md w-full">
+    <ul className="rounded-md w-full">
       <AssetListItems assets={allCoins} />
       <div className="border border-gray-6 h1 mb-5" />
       <AssetListItems assets={allStocks} withPercentage />
     </ul>
   );
 };
+export default AssetsList;

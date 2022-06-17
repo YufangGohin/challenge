@@ -1,4 +1,4 @@
-export const Tabs = () => {
+const Tabs = () => {
   return (
     <div className="border-gray-6">
       <div aria-orientation="horizontal" role="tablist">
@@ -25,3 +25,5 @@ export const Tabs = () => {
     </div>
   );
 };
+
+export default Tabs;

@@ -2,7 +2,7 @@
  * @component
  */
 
-import { TradeCard } from "../components/TradeCard";
+import TradeCard from "../components/TradeCard";
 
 const Homepage = () => {
   return (

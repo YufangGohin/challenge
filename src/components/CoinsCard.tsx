@@ -1,12 +1,12 @@
-import { CoinsList } from "./CoinsList";
-import { Button } from "./Button";
-import { Tabs } from "./Tabs";
+import CoinsList from "./CoinsList";
+import Button from "./Button";
+import Tabs from "./Tabs";
 
 type CoinsCardProps = {
   onClick: () => void;
 };
 
-export const CoinsCard = ({ onClick }: CoinsCardProps) => {
+const CoinsCard = ({ onClick }: CoinsCardProps) => {
   return (
     <div className="flex flex-col items-top w-[380px] h-[460px] bg-white rounded-xl border text-sm border-gray-6 p-5">
       <Tabs />
@@ -53,3 +53,4 @@ export const CoinsCard = ({ onClick }: CoinsCardProps) => {
     </div>
   );
 };
+export default CoinsCard;

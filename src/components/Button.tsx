@@ -6,7 +6,7 @@ type ButtonProps = {
   onClick?: () => void;
 };
 
-export const Button = ({
+const Button = ({
   bgColor,
   borderColor,
   children,
@@ -23,3 +23,4 @@ export const Button = ({
     </button>
   );
 };
+export default Button;

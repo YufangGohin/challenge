@@ -1,12 +1,12 @@
-import { AssetsList } from "./AssetsList";
-import { Search } from "./Search";
-import { Button } from "./Button";
+import AssetsList from "./AssetsList";
+import Search from "./Search";
+import Button from "./Button";
 
 type AssetsCardProps = {
   onClick: () => void;
 };
 
-export const AssetsCard = ({ onClick }: AssetsCardProps) => {
+const AssetsCard = ({ onClick }: AssetsCardProps) => {
   return (
     <div className="flex flex-col items-top w-[380px] bg-white rounded-xl border text-sm border-gray-6 p-3">
       <p className="font-bold dark:text-white my-2 mx-1 text-header-5">
@@ -25,3 +25,4 @@ export const AssetsCard = ({ onClick }: AssetsCardProps) => {
     </div>
   );
 };
+export default AssetsCard;

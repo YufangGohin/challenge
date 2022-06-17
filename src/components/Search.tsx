@@ -1,7 +1,3 @@
-type SearchProps = {
-  onBlur?: (id: string) => void;
-};
-
 const SearchIcon = () => (
   <svg
     width="19"
@@ -17,12 +13,12 @@ const SearchIcon = () => (
     <path
       d="M12.9219 12.9346L17.9987 17.1002"
       stroke="#262626"
-      stroke-linecap="round"
+      strokeLinecap="round"
     />
   </svg>
 );
 
-export const Search = ({ onBlur }: SearchProps) => {
+const Search = () => {
   return (
     <div className="mt-3 relative rounded-xl  border border-gray-8 mb-3">
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -40,3 +36,4 @@ export const Search = ({ onBlur }: SearchProps) => {
     </div>
   );
 };
+export default Search;
